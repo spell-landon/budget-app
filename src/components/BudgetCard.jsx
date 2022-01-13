@@ -8,6 +8,7 @@ function BudgetCard({
   gray,
   hideButtons,
   onAddExpenseClick,
+  onViewExpenseClick,
 }) {
   const classNames = [];
   if (amount > max) {
@@ -53,7 +54,9 @@ function BudgetCard({
               onClick={onAddExpenseClick}>
               Add Expense
             </Button>
-            <Button variant='outline-secondary'>View Expenses</Button>
+            <Button variant='outline-secondary' onClick={onViewExpenseClick}>
+              View Expenses
+            </Button>
           </Stack>
         )}
       </Card.Body>
